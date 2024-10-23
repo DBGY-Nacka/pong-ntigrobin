@@ -12,24 +12,24 @@ class Paddle(Turtle):
         super().__init__()
         self.shape("square")
         self.color("white")
-        self.shapesize(stretch_wid=6, stretch_len=1)  # Makes the paddle long and narrow
+        self.shapesize(stretch_wid=6, stretch_len=1)  #changes shape of paddle
         self.penup()
-        self.goto(position)  # Position the paddle at the specified location
+        self.goto(position)
 
     def go_up(self):
         """
         Moves the paddle upward by increasing its y-coordinate.
         Ensures that the paddle doesn't move beyond the top of the screen.
         """
-        new_y = self.ycor() + 20  # Increase y-coordinate by 20 units
-        if new_y < 260:  # Restrict the paddle from moving above the top boundary
-            self.goto(self.xcor(), new_y)  # Move the paddle to the new position
+        new_y = self.ycor() + 20  #move up
+        if new_y < 260:  #so it cant go above the "roof"
+            self.goto(self.xcor(), new_y)  
 
     def go_down(self):
         """
         Moves the paddle downward by decreasing its y-coordinate.
         Ensures that the paddle doesn't move beyond the bottom of the screen.
         """
-        new_y = self.ycor() - 20  # Decrease y-coordinate by 20 units
-        if new_y > -240:  # Restrict the paddle from moving below the bottom boundary
-            self.goto(self.xcor(), new_y)  # Move the paddle to the new position
+        new_y = self.ycor() - 20  
+        if new_y > -240:  
+            self.goto(self.xcor(), new_y)  

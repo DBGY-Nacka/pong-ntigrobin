@@ -44,7 +44,7 @@ class Ball(Turtle):
         Reverses the ball's x-axis movement and increases the speed to simulate bouncing off a paddle.
         """
         self.x_move *= -1
-        self.move_speed *= 0.9  # Increase speed with each paddle bounce.
+        self.move_speed *= 0.9  #ball goes faster when touching paddles
 
     def reset_position(self):
         """
